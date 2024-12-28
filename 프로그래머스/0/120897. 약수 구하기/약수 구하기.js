@@ -17,5 +17,5 @@ function solution(n) {
   // 쓰레드연산자와 push메서드를 활용하여 answer에 담기
   answer.push(...divisorArray)
     
-  return divisorArray
+  return answer;
 }
