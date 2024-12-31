@@ -3,10 +3,12 @@
 // function solution(num_list, n) {
 //     // 원소를 재정립해라. n번째부터 시작하는
 //     // 기존 num_list에서 기존배열을 n번째만큼 추가했다.
+       // 스프레드 연산자 문법
+      //  const copiedNumList = [...num_list];
 
-//     const truncatedNumList = num_list.splice(n);
+//     const truncatedNumList = num_list.copiedNumList(n);
 
-//     const mergeNumList = truncatedNumList.concat(num_list);
+//     const mergeNumList = truncatedNumList.concat(copiedNumList);
 
 //     return mergeNumList;
 // }
