@@ -18,10 +18,10 @@ function solution(num_list, n) {
     // 스프레드 연산자 문법
     const copiedNumList = [...num_list];
 
-    const changedOrderNumList = num_list.splice(n);
+    const changedOrderNumList = copiedNumList.splice(n);
 
     // 두개의 배열을 합치는 효율적인 스프레드 연산자를 활용추천, ...매개변수(컨벤션 지키기)
-    changedOrderNumList.push(...num_list);
+    changedOrderNumList.push(...copiedNumList);
     
     return changedOrderNumList;
 }
