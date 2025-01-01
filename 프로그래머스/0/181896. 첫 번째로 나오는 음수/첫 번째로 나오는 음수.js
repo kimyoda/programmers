@@ -3,18 +3,19 @@
 function solution(num_list) {
     // num_list에서 음수가 나오는 인덱스를 리턴
     // 없으면 -1 리턴
-    // const firstNegativeNumber = num_list.findIndex((num) => num < 0);
-    // return firstNegativeNumber;
-    
-    let firstNegativeNumber = 0;
-    
-    for (let i = 0; i < num_list.length; i++) {
-      if (num_list[i] < 0) {
-        firstNegativeNumber = i;
-        break;
-      } else {
-        firstNegativeNumber = -1;
-      }
-    }
+    const firstNegativeNumber = num_list.findIndex((num) => num < 0);
+
     return firstNegativeNumber;
+    
+    // let firstNegativeNumber = 0;
+    
+    // for (let i = 0; i < num_list.length; i++) {
+    //   if (num_list[i] < 0) {
+    //     firstNegativeNumber = i;
+    //     break;
+    //   } else {
+    //     firstNegativeNumber = -1;
+    //   }
+    // }
+    // return firstNegativeNumber;
 }
