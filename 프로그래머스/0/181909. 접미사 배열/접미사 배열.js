@@ -2,7 +2,7 @@
 // 모든 접미사를 사전순으로 정렬한
 // 문자열 배열을 return한다
 function solution(my_string) {
-    let suffixList = [];
+    const suffixList = [];
     // 스프레드 연산자로 얕은복사
     const copiedSuffixList = [...suffixList];
     // 문자열 길이만큼 반복 후 문자열의 현재 인덱스부터 끝까지 부분 문자열 추출하여 문자열에 추가, 그 값을 push메서드로 배열에 추가한다. 
