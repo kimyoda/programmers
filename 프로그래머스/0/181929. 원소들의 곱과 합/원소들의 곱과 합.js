@@ -19,4 +19,15 @@ function solution(num_list) {
     }
     // 삼항연산자를 활용해 모든 원소들의 합의 제곱이 모든 원소들의 합보다 크면 1을 반환 아니면 0을 할당하는 삼항연산자 작성
     return isSumSquareGreater = (totalSumOfElements ** 2 > totalProduct) ? 1 : 0; 
+
+    // reduce 활용하기
+   // 배열의 모든 원소(누적값, 현재값)를 곱한 값을 구한다. 초기값은 1로 설정한다. 
+   // const totalProduct = num_list.reduce((acc, cur) => acc * cur, 1);
+   
+   // // 배열의 모든 원소(누적값, 현재값)를 합한 값을 구하고 거듭제곱을 한다. 초기값은 0으로 설정한다. 
+   // const sumSquared = (num_list.reduce((acc, cur) => acc + cur, 0)) ** 2;
+   
+   // const isSumSquareGreater = (sumSquared > totalProduct) ? 1 : 0;
+    
+   // return isSumSquareGreater;
   }
