@@ -10,19 +10,18 @@ function solution(n, control) {
     // switch문을 사용하여 각 문자에 해당하는 조건을 처리한다.
       switch (control[i]) {
         case "w":
-          n += 1; // "w"가 나오면 n을 1증가
+          numbersControl += 1; // "w"가 나오면 n을 1증가
           break;
         case "s":
-          n -= 1; // "s"가 나오면 n을 1감소시킨다.
+          numbersControl -= 1; // "s"가 나오면 n을 1감소시킨다.
           break;
         case "d":
-          n += 10; // "d"가 나오면 n을 10증가시킨다.
+          numbersControl += 10; // "d"가 나오면 n을 10증가시킨다.
           break;
         case "a":
-          n -= 10; // "a"가 나오면 n을 10 감소시킨다.
+          numbersControl -= 10; // "a"가 나오면 n을 10 감소시킨다.
           break;
       }        
-      numbersControl = n;
     }
     return numbersControl;
 }
