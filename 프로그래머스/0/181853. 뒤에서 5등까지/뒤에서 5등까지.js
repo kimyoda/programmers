@@ -8,3 +8,10 @@ function solution(num_list) {
     // 2. slice로 sort 정렬된 배열을 0번부터 5번까지 리턴하여 종료한다.
     return smallestFiveNumber.slice(0, 5);
 }
+
+function solution2(num_list) {
+    // solution 2
+    const smallestFiveNumberList = [...num_list].sort((a, b) => a - b).slice(0, 5);
+    
+    return smallestFiveNumberList;
+}
