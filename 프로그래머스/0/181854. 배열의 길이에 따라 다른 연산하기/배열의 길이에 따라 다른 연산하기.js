@@ -21,6 +21,7 @@ function solution(arr, n) {
 
 function solution2(arr, n) {
   const addValue = n;
+
   const arrLength = arr.length;
   // map을 활용하여 el, idx를 통해 arrLength가 홀수면 짝수인덱스 위치에 el을 더한 새로운 배열을 할당한다.
   const arrSum = arr.map((el, idx) => {
