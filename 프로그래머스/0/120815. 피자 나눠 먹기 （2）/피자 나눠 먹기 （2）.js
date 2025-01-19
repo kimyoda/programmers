@@ -21,15 +21,3 @@ function solution(n) {
   return price / 6; // 최소 피자 판수 반환
     
 }
-
-function solution2(n) {
-  // 피자 1판
-  let price = 6;
-
-  while ((price % n) !== 0) {
-    // 조건을 만족하지 않으면 6을 추가
-    price += 6; 
-  }
-
-  return price / 6; // 최소 피자 판수 반환
-}
