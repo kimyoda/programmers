@@ -6,16 +6,16 @@ function solution(str_list) {
   // 1. l와 r의 인덱스를 확인한다
   const leftCheckedIndex = str_list.indexOf("l");
   const rightCheckedIndex = str_list.indexOf("r");
-
+  const lFirstCases = leftCheckedIndex !== -1 && (rightCheckedIndex === -1 || leftCheckedIndex < rightCheckedIndex);
   // 2. 각가에 맞는 조건을 넣기
   // 3. l와 r 모두 없는 경우 빈배열 리턴
   if (leftCheckedIndex === -1 && rightCheckedIndex === -1) {
     return [];
   }
   // l가 먼저 나오는 경우
-  if (leftCheckedIndex !== -1 && (rightCheckedIndex === -1 || leftCheckedIndex < rightCheckedIndex)) {
+  if (lFirstCases) {
     return str_list.slice(0, leftCheckedIndex);
   }
-    // r이 먼저 나오는 경우
-    return str_list.slice(rightCheckedIndex + 1);
+  // r이 먼저 나오는 경우
+  return str_list.slice(rightCheckedIndex + 1);
 }
