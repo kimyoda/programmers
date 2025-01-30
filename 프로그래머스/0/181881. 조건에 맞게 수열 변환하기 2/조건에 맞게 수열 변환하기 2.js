@@ -24,18 +24,18 @@ function solution(arr) {
       return el;
     });
       
-  // 3. 이전 배열과 현재 배열 비교
-  // every 함수를 사용하여 두 배열의 모든 요소가 동일한지 확인하다.
-  const isAllSame = copiedPrevArr.every((el, idx) => el === currentArr[idx]);
-  // 두 배열이 동일하면 더 이상 변하지 않기에 반복을 종료한다.
-  if (isAllSame) {
-    break;
-  }
+    // 3. 이전 배열과 현재 배열 비교
+    // every 함수를 사용하여 두 배열의 모든 요소가 동일한지 확인하다.
+    const isAllSame = copiedPrevArr.every((el, idx) => el === currentArr[idx]);
+    // 두 배열이 동일하면 더 이상 변하지 않기에 반복을 종료한다.
+    if (isAllSame) {
+      break;
+    }
      
-  // 4. 현재 배열을 이전 배열로 저장한다.
-  copiedPrevArr = currentArr;
-  // 5. 반복 횟수를 저장한다.
-  iterationCount  += 1;
+    // 4. 현재 배열을 이전 배열로 저장한다.
+    copiedPrevArr = currentArr;
+    // 5. 반복 횟수를 저장한다.
+    iterationCount  += 1;
   }
   return iterationCount ;
 }
