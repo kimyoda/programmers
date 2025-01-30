@@ -31,7 +31,6 @@ function solution(arr) {
     if (isAllSame) {
       break;
     }
-     
     // 4. 현재 배열을 이전 배열로 저장한다.
     copiedPrevArr = currentArr;
     // 5. 반복 횟수를 저장한다.
