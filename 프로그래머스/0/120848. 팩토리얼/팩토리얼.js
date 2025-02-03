@@ -9,6 +9,5 @@ function solution(n) {
     result *= i;
   }
   // 초과하기 전의 i
-  console.log(i);
   return i - 1;
 }
