@@ -11,3 +11,23 @@ function solution(n) {
   // 초과하기 전의 i
   return i - 1;
 }
+
+function factorial(num) {
+  let result = 1;
+
+  for (let i = 1; i <= num; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+function solution2(n) {
+  let candidate = 1;
+  let cureentFactorial = 1;
+
+  while (cureentFactorial <= n) {
+    candidate++;
+    cureentFactorial = factorial(candidate);
+  }
+  return candidate - 1;
+}
