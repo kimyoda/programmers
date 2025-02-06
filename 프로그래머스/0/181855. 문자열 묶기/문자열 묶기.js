@@ -11,10 +11,10 @@ function solution(strArr) {
   strLengths.forEach(el => {
     // 3. lengthCount객체에 el을 넣고 el이 0이거나 +1일경우를 담는다.    
     groupCount[el] = (groupCount[el] || 0) + 1;
-    if (groupCount[el] > maxCount) {
-      // 4. 그룹의 최대값
-      maxCount = groupCount[el];
-    }  
+      if (groupCount[el] > maxCount) {
+        // 4. 그룹의 최대값
+        maxCount = groupCount[el];
+      }  
   });
   // 2. 조건이 같을 때 가장 개수가 많은 그룹의 크기 구하기
   return maxCount;
