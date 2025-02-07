@@ -9,11 +9,39 @@ function solution(order) {
     cafelatte: 5000,
   };
   // 2. filter로 americano, latte, anything일 때 includes로 포함시키기
-  const americanoCount = order.filter(el => el.includes("americano")).length;
-  const latteCount = order.filter(el => el.includes("cafelatte")).length;
-  const anythingCount = order.filter(el => el.includes("anything")).length;
+  const americanoCount = order.filter((el) => el.includes("americano")).length;
+  const latteCount = order.filter((el) => el.includes("cafelatte")).length;
+  const anythingCount = order.filter((el) => el.includes("anything")).length;
   // 3. 각 메뉴의 가격을 계산 후, reduce를 이용해 총 결제 금액을 구한다.
-  const totalPrice = [americanoCount * priceMap.americano, latteCount * priceMap.cafelatte, anythingCount * priceMap.americano].reduce((acc, cur) => acc + cur, 0);
-    
+  const totalPrice = [
+    americanoCount * priceMap.americano,
+    latteCount * priceMap.cafelatte,
+    anythingCount * priceMap.americano,
+  ].reduce((acc, cur) => acc + cur, 0);
+
+  return totalPrice;
+}
+
+function solution2(order) {
+  // 객체로 americano, cafelatte의 각 값을 뺀다.
+  const priceMap = {
+    americano: 4500,
+    cafelatte: 5000,
+  };
+
+  // reduce와 includes를 활용하여 한번에 최종 금액을 구한다.
+  const totalPrice = order.reduce((acc, cur) => {
+    // 1. americano의 총 값
+    if (cur.includes("americano")) {
+      acc += priceMap.americano;
+      // 2. latte의 총 값
+    } else if (cur.includes("cafelatte")) {
+      acc += priceMap.cafelatte;
+    } else if (cur === "anything") {
+      acc += priceMap.americano;
+    }
+    return acc;
+  }, 0);
+
   return totalPrice;
 }
