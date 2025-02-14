@@ -15,3 +15,13 @@ function solution(num_list) {
   }
   return num_list;
 }
+
+function solution2(num_list) {
+  // at이라는 메서드를 활용하여 마지막 원소값 할당
+  const lastEl = num_list.at(-1);
+  const prevEl = num_list.at(-2);
+  // 위 할당된 값들을 삼항연산자를 통해 조건설정
+  num_list.push(lastEl > prevEl ? lastEl - prevEl : lastEl * 2);
+
+  return num_list;
+}
