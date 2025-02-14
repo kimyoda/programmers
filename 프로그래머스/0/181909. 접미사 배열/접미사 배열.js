@@ -14,3 +14,9 @@ function solution(my_string) {
     
   return copiedSuffixList;
 }
+
+function solution2(my_string) {
+  const suffixList = my_string.split("").map((_, idx) => my_string.slice(idx)).sort();
+
+  return suffixList;
+}
