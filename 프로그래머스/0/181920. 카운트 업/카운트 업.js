@@ -8,3 +8,14 @@ function solution(start_num, end_num) {
   }
   return countNumbers;
 }
+
+function solution2(start_num, end_num) {
+  // 변수 선언
+  const countNumberArr = [];
+
+  // Array.form으로 차례로 담은 리스트 리턴
+  countNumberArr.push(...Array.from({ length: end_num - start_num + 1}, (_, i) => start_num + i));
+
+  return countNumberArr;
+  
+}
