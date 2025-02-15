@@ -1,8 +1,8 @@
 function solution(money) {
-    const restoftheCount = [];
+  const restoftheCount = [];
 
-    restoftheCount.push(parseInt(money / 5500));
-    restoftheCount.push(money % 5500);
+  restoftheCount.push(parseInt(money / 5500));
+  restoftheCount.push(money % 5500);
 
-    return restoftheCount;
+  return restoftheCount;
 }
