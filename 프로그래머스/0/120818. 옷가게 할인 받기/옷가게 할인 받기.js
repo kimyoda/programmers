@@ -19,4 +19,22 @@ function solution(price) {
   return parseInt(price * (1 - discount));
 }
 
-    
+function solution2(price) {
+  let discount = 0;
+  // 각 할인율에 맞게 case별로 거쳐서 리턴한다.
+  switch (true) {
+    case price >= 500000: {
+      discount = 0.2;
+      break;
+    }
+    case price >= 300000: {
+      discount = 0.1;
+      break;
+    }
+    case price >= 100000: {
+      discount = 0.05;
+      break;
+    }
+  }
+  return parseInt(price * (1 - discount));
+}
