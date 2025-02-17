@@ -15,3 +15,18 @@ function solution(hp) {
   antCount += hp;
   return antCount;
 }
+
+function solution2(hp) {
+  // 1. 담을변수
+  let antCount = 0;
+  // 2. 구조분해 할당(병사 공격력)
+  const attackPower = [5, 3, 1];
+
+  // 3. for of문을 통해 각 개체마다 순회하여 값을 더하고 나눈다.
+  for (const power of attackPower) {
+    antCount += Math.floor(hp / power);
+    hp %= power;
+  }
+
+  return antCount;
+}
