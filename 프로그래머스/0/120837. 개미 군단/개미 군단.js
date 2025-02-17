@@ -19,7 +19,7 @@ function solution(hp) {
 function solution2(hp) {
   // 1. 담을변수
   let antCount = 0;
-  // 2. 구조분해 할당(병사 공격력)
+  // 2. 공격력을 배열로 저장(큰값부터 순서대로)
   const attackPower = [5, 3, 1];
 
   // 3. for of문을 통해 각 개체마다 순회하여 값을 더하고 나눈다.
