@@ -9,3 +9,16 @@ function solution(array) {
   return middleValue;
 }
 
+function solution(array) {
+  // 길이를 변수명으로 뺀다
+  const arrayLength = array.length;
+  // 중간값을 변수명으로 뺸다.
+  const middleIndex = Math.floor(arrayLength / 2);
+  // sort로 array을 정렬시킨다(전개구문)
+  const sortedArr = array.sort((a, b) => a - b);
+  // 중앙값
+  const middleValue = sortedArr[middleIndex];
+  
+  return middleValue;
+};
+
