@@ -7,4 +7,14 @@ function solution(num_str) {
   return sumOfStrNumbers;
 }
 
+function solution2(num_str) {
+  // 1. for문으로 순회하여 각 자리 수를 정수로 변환 후 누적 합산한다.
+  let sumOfStrNumbers = 0;
+  for (let i = 0; i < num_str.length; i++) {
+    // 2.  각 문자를 정수로 변환 후 더한다. 
+    sumOfStrNumbers += parseInt(num_str[i]);
+  }
+
+  return sumOfStrNumbers
+}
 
