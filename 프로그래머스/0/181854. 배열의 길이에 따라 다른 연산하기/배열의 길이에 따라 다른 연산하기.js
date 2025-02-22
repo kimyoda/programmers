@@ -16,3 +16,17 @@ function solution(arr, n) {
   });
   return arrSum;
 }
+
+function solution2(arr, n) {
+  // for문으로 arr길이만큼 순회하여 각 조건에 해당할 때 값을 추가한다.
+  for (let i = 0; i < arr.length; i++) {
+    // 1. arr.length가 홀수면 짝수인덱스 위치에 i만큼 더한값을 추가.
+    if (arr.length % 2 !== 0 && i % 2 === 0) {
+      arr[i] += n;
+      // 2. arr.length가 짝수면 홀수인덱스 위치에 i만큼 더한값을 추가
+    } else if (arr.length % 2 === 0 && i % 2 !== 0) {
+      arr[i] += n;
+    }
+  }
+  return arr;
+}
