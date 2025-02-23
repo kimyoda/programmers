@@ -9,8 +9,16 @@ function solution(arr) {
   const arrayAddedA = arr.forEach(el => {
    for (let i = 0; i < el; i++) {
      emptyArray.push(el); 
-   }    
+   }
   });
   return emptyArray;
+}
+
+function solution2(arr) {
+  // reduce를 통해 전개구문으로 acc의 값을 더하고 cur을 배열로 cur을 cur번 추가한다.
+  // 초기값은 빈배열이다.
+  const sumArray = arr.reduce((acc, cur) => [...acc, ...Array(cur).fill(cur)], []);
+
+  return sumArray;
 }
 
