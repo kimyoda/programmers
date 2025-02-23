@@ -9,6 +9,14 @@ function solution(array) {
   const maxIndex = array.indexOf(max);
   // 3. 가장 큰 값과 큰 수의 인덱스를 담은 배열을 리턴한다.
   const maxNumbers = [max, maxIndex];
-    
+
   return maxNumbers;
+}
+
+function solution2(array) {
+  const max = Math.max(...array);
+
+  const maxIndex = array.findIndex((el) => el === max);
+
+  return [max, maxIndex];
 }
