@@ -6,6 +6,21 @@ function solution(num_list) {
 
   // 2. sort로 정렬 한뒤 slice로 5개가 리턴하도록하기
   const sortedNumbers = copiedNumList.sort((a, b) => a - b).slice(0, 5);
-    
+
   return sortedNumbers;
+}
+
+function solution2(num_list) {
+  const copiedNumList = [...num_list];
+
+  const sortedNumList = copiedNumList.sort((a, b) => a - b);
+  const smallNumbers = [];
+
+  sortedNumList.forEach((el, idx) => {
+    if (idx < 5) {
+      smallNumbers.push(el);
+    }
+  });
+
+  return smallNumbers;
 }
