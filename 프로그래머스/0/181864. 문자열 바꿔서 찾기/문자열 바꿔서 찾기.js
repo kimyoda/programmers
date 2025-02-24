@@ -9,11 +9,20 @@ function solution(myString, pat) {
     // 1. 현재 문자가 A면 전부 B로 변경하고 추가한다.
     if (myString[i] === "A") {
       changedStr += "B";
-    // 2. 현재 문자가 B면 전부 A로 변경하고 추가한다. 
+      // 2. 현재 문자가 B면 전부 A로 변경하고 추가한다.
     } else if (myString[i] === "B") {
-      changedStr += "A";  
+      changedStr += "A";
     }
   }
   // includes메서드를 사용하고 삼항연산자를 활용해 pat이 있으면 1 없으면 0을 반환한다.
+  return changedStr.includes(pat) ? 1 : 0;
+}
+
+function solution2(myString, pat) {
+  // 배열로 바꿔서 map으로 조건을 할당하여 join으로 다시 문자열로 변환하여 할당한다.
+  const changedStr = [...myString]
+    .map((el) => (el === "A" ? "B" : "A"))
+    .join("");
+
   return changedStr.includes(pat) ? 1 : 0;
 }
