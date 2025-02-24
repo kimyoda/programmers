@@ -2,8 +2,6 @@
 // 2. n의 약수의 오름차순을 구한다
 // 3. 오름차순을 담은 배열을 return 한다.
 function solution(n) {
-  const answer = [];
-  // 약수를 나눌 변수 설정
   const divisorArray = [];
   // 반복문을 통하여 n만큼 반복
   for (let i = 1; i <= n; i++) {
