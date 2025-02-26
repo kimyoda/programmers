@@ -7,6 +7,7 @@ function solution(myString, pat) {
 }
 
 function solution2(myString, pat) {
+  // indexOf가 존재하면 0을 반환하기에 결과가 -1인지 하는 조건을 추가한다.
   const checkedStr =
     myString.toUpperCase().indexOf(pat.toUpperCase()) !== -1 ? 1 : 0;
 
