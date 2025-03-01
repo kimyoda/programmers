@@ -7,3 +7,10 @@ function solution(num_list, n) {
 
   return changedNumList;
 }
+
+function solution2(num_list, n) {
+  // filter를 통해 n번째 원소의 인덱스만 새로운 배열로 반환한다.
+  const changedNumList = num_list.filter((_, idx) => idx >= n - 1);
+
+  return changedNumList;
+}
