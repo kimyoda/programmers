@@ -20,3 +20,30 @@ function solution(my_strings, parts) {
   }
   return sumStr;
 }
+
+function solution2(my_strings, parts) {
+  const sumStr = my_strings
+    .map((el, idx) => {
+      // 첫 번째 인덱스 값
+      const firstArrIndex = parts[idx][0];
+      // 두 번째 인덱스 값
+      const secondArrIndex = parts[idx][1];
+      return el.substring(firstArrIndex, secondArrIndex + 1);
+    })
+    .join("");
+
+  return sumStr;
+}
+
+function solution3(my_strings, parts) {
+  // 변수 선언
+  const sumStr = "";
+
+  my_strings.forEach((el, i) => {
+    const firstArrIndex = parts[i][0];
+    const secondArrIndex = parts[i][1];
+    sumStr += el.substring(firstArrIndex, secondArrIndex + 1);
+  });
+
+  return sumStr;
+}
