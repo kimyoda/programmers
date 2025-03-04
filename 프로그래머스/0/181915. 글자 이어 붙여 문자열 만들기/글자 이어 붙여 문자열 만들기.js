@@ -5,9 +5,15 @@ function solution(my_string, index_list) {
   // 1. 문자열 저장하는 변수 할당
   let sumStr = "";
   // 2. forEach의 인덱스만큼 문자열을 추가하여 리턴한다.
-  index_list.forEach((idx) => {      
+  index_list.forEach((idx) => {
     sumStr += my_string[idx];
   });
   return sumStr;
 }
 
+function solution2(my_string, index_list) {
+  // 1. map과 join을 활용하여 문자열을 저장하는 변수를 할당한다.
+  const sumStr = index_list.map((idx) => my_string[idx]).join("");
+
+  return sumStr;
+}
