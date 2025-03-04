@@ -8,3 +8,15 @@ function solution(start_num, end_num) {
   }
   return countNumbers;
 }
+
+function solution2(start_num, end_num) {
+  // 두 정수 값을 Array.form으로 배열로 만들고 reduce로 합친다
+  const countNumbers = Array.from({ length: end_num - start_num + 1 });
+
+  const countNumberList = countNumbers.reduce((acc, _, i) => {
+    acc.push(start_num + i);
+    return acc;
+  }, []);
+
+  return countNumberList;
+}
