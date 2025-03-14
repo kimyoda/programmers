@@ -11,3 +11,20 @@ function solution(strArr) {
     
     return deletedAdStr;
 }
+
+function solution2(strArr) {
+  // 문자열 배열의 담기 위한 변수 할당
+  let result = [];
+
+  // forEach를 활용하여 조건에 맞는 배열 담기
+  strArr.forEach(el => {
+    // includes를 통해 "ad"를 담은 문자열 제거
+    if (!el.includes("ad")) {
+      // push를 통해 result에 el을 포함한 할당
+      result.push(el);
+    }
+  });
+
+  return result;
+}
+
