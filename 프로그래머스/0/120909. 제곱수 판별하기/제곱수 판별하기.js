@@ -7,3 +7,13 @@ function solution(n) {
   return sqrt % 1 === 0 ? 1 : 2;
 }
 
+function solution2(n) {
+  // for문으로 풀어보기
+  for (let i = 1; i * i <= n; i++) {
+    // i의 제곱값이 n일 때 1 아니면 2
+    if (i * i === n) {
+      return 1;
+    }
+  }
+  return 2;
+}
