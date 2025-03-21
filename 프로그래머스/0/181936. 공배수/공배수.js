@@ -11,3 +11,11 @@ function solution2(number, n, m) {
   }
   return 0;
 }
+// x와 y를 나누면 0으로 떨어진다.
+function isDivisible(x, y) {
+  return x % y === 0;
+}
+
+function solution3(number, n, m) {
+  return isDivisible(number, n) && isDivisible(number, m) ? 1 : 0;
+}
