@@ -9,3 +9,30 @@ function solution(myString) {
   
   return sortedChars;
 }
+
+function solution2(myString) {
+  // 변수할당
+  const result = [];
+  let temp = "";
+
+  // for문 활용
+  for (let i = 0; i < myString.length; i++) {
+    // x일때
+    if (myString[i] === "x") {
+      // 빈 문자열을 제외하고 추가한다.
+      if (temp !== "") {
+        result.push(temp);
+        temp = "";
+      } 
+      // 나머지를 계속 이어 붙인다.
+    } else {
+      temp += myString[i];
+    }
+  }
+  // 마지막에 남은 문자열을 추가한다.
+  if (temp !== "") {
+    result.push(temp);
+  }
+
+  return result.sort();
+}
