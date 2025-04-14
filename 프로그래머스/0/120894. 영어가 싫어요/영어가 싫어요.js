@@ -4,22 +4,22 @@
 function solution(numbers) {
   // 1. 영어를 객체화해서 선언한다.
   const numberMap = {
-      "zero": "0",
-      "one" : "1",
-      "two" : "2",
-      "three" : "3",
-      "four" : "4",
-      "five" : "5",
-      "six" : "6",
-      "seven" : "7",
-      "eight" : "8",
-      "nine" : "9"
+    zero: "0",
+    one: "1",
+    two: "2",
+    three: "3",
+    four: "4",
+    five: "5",
+    six: "6",
+    seven: "7",
+    eight: "8",
+    nine: "9",
   };
   // 2. 객체화 된 값을 반복하여 3글자, 4글자, 5글자, 6글자에 매칭되서 숫자와 매칭한다.
   let i = 0;
   // 숫자를 이어붙일 문자열 변수할당
   let strEngNumber = "";
-  
+
   while (i < numbers.length) {
     // 3. 3과 같고 5를 넘지낳고 같은 숫자(최대 숫자가 seven)
     for (let j = 3; j <= 5; j++) {
@@ -36,4 +36,27 @@ function solution(numbers) {
   }
   // 문자열을 숫자로 리턴
   return Number(strEngNumber);
+}
+
+function solution2(numbers) {
+  // 배열로 만든다 numbers의 문자열을
+  const numStr = [
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ];
+
+  // forEach를 활용하여 나누고 문자열로 변환한다.
+  numStr.forEach((el, idx) => {
+    numbers = numbers.split(el).join(idx);
+  });
+
+  return Number(numbers);
 }
