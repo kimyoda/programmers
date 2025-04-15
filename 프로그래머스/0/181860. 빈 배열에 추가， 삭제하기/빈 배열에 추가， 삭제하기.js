@@ -15,10 +15,25 @@ function solution(arr, flag) {
     } else {
       // flag[i]가 false면 arr[i]마지막 요소 제거
       for (let j = 0; j < el; j++) {
-        X.pop(); 
+        X.pop();
       }
     }
   });
   // 3. flag[i]가 false면 마지막 arr[i]개의 원소를 제거(pop이용)
+  return X;
+}
+
+function solution2(arr, flag) {
+  let X = [];
+
+  const NumberArr = arr.reduce((acc, cur, idx) => {
+    // flag를 순회하고 트루면 arr[idx] 2번추가
+    if (flag[idx]) {
+      X.push(...Array(cur * 2).fill(cur));
+    } else {
+      X.splice(-cur, cur);
+    }
+  }, 0);
+
   return X;
 }
