@@ -12,6 +12,7 @@ rl.on('line', function (line) {
     str1 = input[0];
     str2 = input[1];
     // concat이용해서 문자열을 붙여서 출력한다.
-    console.log(str1.concat(str2));
+    // console.log(str1.concat(str2));
+    console.log(str1 + str2);
 });
 
