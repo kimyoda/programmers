@@ -19,3 +19,21 @@ function solution(str_list) {
   // r이 먼저 나오는 경우
   return str_list.slice(rightCheckedIndex + 1);
 }
+
+function solution2(str_list) {
+  let result = [];
+  // 길이만큼 반복한다.
+  for (let i = 0; i < str_list.length; i++) {
+    // "l"이 먼저 나오는 경우 break
+    if (str_list[i] === "l") {
+      result = str_list.slice(0, i);
+      break;
+    }
+    // "r"이 먼저 나오는 경우의 수
+    if (str_list[i] === "r") {
+      result = str_list.slice(i + 1);
+      break;
+    }
+  }
+  return result;
+}
