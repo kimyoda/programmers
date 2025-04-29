@@ -18,3 +18,16 @@ function solution(my_string) {
   });
   return alphabetFrequencyArr;
 }
+
+function solution2(my_string) {
+  const alphabetFrequencyArr = Array(52).fill(0);
+
+  for (const char of my_string) {
+    if (char >= "A" && char <= "Z") {
+      alphabetFrequencyArr[char.charCodeAt() - "A".charCodeAt()]++;
+    } else if (char >= 'a' && char <= "z") {
+      alphabetFrequencyArr[26 + (char.charCodeAt() - 'a'.charCodeAt())]++;
+    }
+  }
+  return alphabetFrequencyArr;
+}
